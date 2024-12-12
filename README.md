@@ -6,6 +6,6 @@ A Well-Developed Portfolio Showcasing All My Projects
 - 🌟 **Responsive Design**
 - 📁 **Projects Section**
 - ✉️ **Contact Form**
-- 🌈 **Smooth Animations**
+- 🌀 **Smooth Animations**
 
 A Portfolio project built with astro, developed using html, sass and javascript.
