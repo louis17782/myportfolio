@@ -1,24 +1,25 @@
 ---
-import logo from "../assets/image/logo.png"
+import points from "../assets/image/points.png";
 ---
 
-<div class="blur-background tire">     
+<div class="blur-background">     
   <nav>
     <a class="nav-logo" href="/">
-      <img src={logo.src} alt="logo">
+      <img src={points.src} alt="logo">
     </a>
     <div class="close-menu-container">
-      <button id="close-menu" type="button" class="close-menu"></button>
+      <button aria-label="close-menu" id="close-menu" type="button" class="close-menu"></button>
+      <i class="ph ph-x"></i>
     </div> 
     <div class="nav-container">
       <ul class="navlinks"> 
-        <li><a class="navdesk" href="/"><img src={logo.src} alt="logo"></a></li>
-        <li><a href="/" data-astro-prefetch rel="noreferrer">HOLA</a></li>
-        <li><a href="/nosotros/" data-astro-prefetch rel="noreferrer">PORTAFOLIO</a></li>
-        <li><a href="/contacto/" data-astro-prefetch rel="noreferrer">SOBRE MI</a></li>
-        <li><a href="/noticias/" data-astro-prefetch rel="noreferrer">CONTACTO</a></li>
+        <!-- <li><a class="navdesk" href="/"><img src={points.src} alt="logo"></a></li> -->
+        <li><a href="/" data-astro-prefetch>HELLO</a></li>
+        <li><a href="#" data-astro-prefetch>PROJECTS</a></li>
+        <li><a href="#" data-astro-prefetch>ABOUT ME</a></li>
+        <li><a href="#" data-astro-prefetch>CONTACT</a></li>
         <div class="content"> 
-          <li><a id="language-toggle" href="/home/" data-astro-prefetch rel="noreferrer">en</a></li>
+          <li><a id="language-toggle" href="#" data-astro-prefetch rel="noreferrer">EN</a></li>
           <i class="ph ph-translate"></i>
         </div>
       </ul>
@@ -35,39 +36,62 @@ import logo from "../assets/image/logo.png"
     left: 0;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(10px);
-    background-color: rgba($tertiary, 0.85);
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    backdrop-filter: blur(20px);
+    transition: 0.5s ease-in;
+    opacity: 1;
     z-index: -1;
     pointer-events: none;
   }
 
-  .tire {
-    background-image: url('../assets/image/Tiremark.webp');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-  }
-
   .blur-background.active {
     opacity: 1;
-    z-index: 99;
+    z-index: 20;
     pointer-events: auto;
   }
 
-  .navlinks {
-    justify-content: center;
+  nav {
+    position: fixed;
+    top: 0;
+    right: -550px; 
+    width: 100%;
+    height: 100%;
+    background-color: rgba($primary, 80%);
+    transition: right 0.5s ease-out;
+    z-index: 2; 
+  }
+
+  nav.active {
+    right: 0; 
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 0;
-    transition: transform 0.5s ease, opacity 0.9s ease;
+    margin: 0;
+  }
+
+  .nav-logo img {
+    display: block;
+    margin: 70px auto;
+    width: 100px;
+    height: auto;
   }
 
   .content, i {
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     color: $secondary;
+  }
+
+  li:hover {
+    text-decoration:underline;
+    text-decoration-color: $tertiary;
+    text-underline-offset: 13px;
+    text-decoration-thickness: 3px;
   }
 
   .content li {
@@ -77,144 +101,39 @@ import logo from "../assets/image/logo.png"
   .navlinks a {
     display: block;
     text-align: center;
-    padding: 20px 0;
-    text-decoration: none;
     font-size: 2rem;
     font-weight: $regular;
     font-family: $heading;
-    text-transform: uppercase;
     color: $secondary;
+    margin-top: 80px;
   }
 
-  li:hover {
-    text-decoration:underline;
-    text-decoration-color: $accent-b-light;
-    text-underline-offset: 13px;
-    text-decoration-thickness: 3px;
-  }
-
-  // start button style
+    // start button style
   .close-menu-container {
     position: fixed;
-    top: 30px;
-    right: 5%;
-    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    top: 30px;
+    right: 5%;
   }
 
   /* Botón para cerrar menú */
   #close-menu {
     position: absolute;
-    width: 60px;
-    height: 60px;
     background: transparent;
     border: none;
     cursor: pointer;
-    z-index: 2;
   }
 
-  /* Rombito de fondo */
-  .rombo {
-    width: 35px;
-    height: 35px;
-    background-color: #34373D;
-    transform: rotate(45deg); 
-    box-shadow: 0 0 10px 5px rgba($primary, 70%);
-    border-radius: 4px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .line2 {
-    width: 29px;
-    height: 4px;
-    background-color: #E03F53; 
-    position: relative;
-    box-shadow: 0 0 10px 5px rgba(221, 46, 68, 35%);
-  }
-
-  .line2::before {
-    content: "";
-    position: absolute;
-    width: 29px;
-    height: 4px;
-    background-color: #E03F53;
-    box-shadow: 0 0 10px 5px rgba(221, 46, 68, 35%);
-    transform: rotate(90deg);
-  }
-
-  .nav-logo { 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    width: 100%;
-    margin-top: 3rem;
-  }
-
-  .nav-logo img {
-    width: 160px;
-    height: auto;
-  }
-
-  .nav-desktop img {
-    display: none;
-  }
-
-  .navdesk > img {
-    display: none;
+  .ph-x {
+    font-size: 3rem;
   }
 
   @media only screen and (min-width: 1024px) {
-
-    .nav-container {
-      background-color: $tertiary;
-      position: fixed;
-      z-index: 99;
-      width: 100%;
-    }
-
-    .navlinks {
-      display: flex;
-      flex-direction: row;
-      height: 75px;
-      margin: 0 5%;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .navlinks a {
-      color: $secondary;
-    }
-
-    .close-menu-container {
+    .blur-background, nav {
       display: none;
-    }
-
-    .blur-background {
-      position: static; 
-      top: auto; 
-      left: auto; 
-      width: auto; 
-      height: auto; 
-      backdrop-filter: none;
-      background-color: transparent; 
-      opacity: 1; 
-      transition: none; 
-      z-index: auto; 
-      pointer-events: all; 
-    }
-
-    .nav-logo {
-      display: none;
-    }
-
-    .navdesk img {
-      display: block;
-      width: 60px;
-      margin-right: 70px;
     }
   }
+
 </style>

@@ -1,0 +1,114 @@
+---
+---
+
+<section>
+<div class="project">
+  <div class="background-a">
+    <h3>Construcciones hrcc c.a</h3>
+  </div>
+  <div class="content">
+   <p>Lorem ipsuminformacion A.</p>
+    <button class="primarybutton">
+      <a href="#">start</a>
+    </button>
+  </div>
+</div>
+
+<div class="project">
+  <div id="show" class="background-b">
+    <h3>Construcciones hrcc c.a</h3>
+  </div>
+  <div class="content">
+   <p>Lorem ipsum informacion B</p>
+    <button class="primarybutton">
+      <a href="#">start</a>
+    </button>
+  </div>
+</div>
+</section>
+
+<style lang="scss">
+  @use "../assets/sass/index" as *;
+
+  body {
+    background-color: $bluedark;
+  }
+
+  .project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 30px;
+  }
+
+  .background-a,
+  .background-b {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 359px;
+    height: 257px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .background-a::before,
+  .background-b::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($primary, 0.8);
+    z-index: 1;
+  }
+
+  .background-a {
+    background-image: url("../assets/image/project1.webp");
+  }
+
+  .background-b {
+    background-image: url("../assets/image/project2.webp");
+  }
+
+  h3 {
+    position: relative;
+    z-index: 2;
+    color: $secondary;
+  }
+
+  .content {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $blue-accent;
+    width: 362px;
+    height: 260px;
+    border-radius: 8px;
+    z-index: 99;
+  }
+  
+  p {
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+@media only screen and (width >= 1024px) {
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+</style>
