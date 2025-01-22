@@ -28,7 +28,7 @@ const {title} = Astro.props;
     scroll-behavior: smooth;
   }
   
-  li, ol, a {
+  ol, a {
     list-style: none;
     text-decoration: none;
   }
@@ -72,9 +72,8 @@ const {title} = Astro.props;
     height: 2px;
     background-color: $tertiary;
     justify-content: left;
-    margin-top: 0px;
     border-radius: 2px;
-    margin: 0 5%; 
+    margin: 0 5% 20px; 
   }
   
   p {
@@ -108,6 +107,11 @@ const {title} = Astro.props;
     justify-content: center;
     align-items: center;
     border: none;
+    font-family: $text;
+    font-weight: $regular;
+    font-size: 1.5rem;
+    color: $tertiary;
+    
     a {
       font-family: $text;
       font-weight: $regular;
@@ -120,13 +124,8 @@ const {title} = Astro.props;
     box-shadow: 0 0 10px 10px rgba($tertiary, 35%);
   }
   
-  // .red-button {
-  //   background-color: $accent-c-light;
-  // }
-  
   .primarybutton:hover {
     background-color: $primary;
     box-shadow: 0 0 25px 15px rgba($tertiary, 25%);
   }
-  
 </style>
