@@ -1,0 +1,140 @@
+---
+const {title, text, name, email, textarea} = Astro.props;
+---
+
+<h2>Get started</h2>
+<div class="underline"></div>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+Doloremque, rerum!</p>
+
+<section>
+  <div class="podcasts-container">
+    <h2>{title}</h2>
+    <div class="underline-content"></div>
+    <p>{text}</p>
+    <form action="/" method="post">
+      <div class="row"> 
+        <div class="column">
+          <label for="name">{name}</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+        </div>
+        <div class="column">
+          <label for="email">{email}</label>
+          <input type="email" id="email" name="email" placeholder="name@gmail.com" required>
+        </div>
+      </div>
+      <label for="message">{textarea}</label>
+      <textarea id="message" name="message" placeholder="Write your message..."></textarea>
+      <div class="button-container"> 
+        <button class="primarybutton" type="submit">send</button>
+      </div>
+    </form>
+  </div>
+</section>
+    
+<style lang="scss">
+  @use "../assets/sass/index" as *;
+
+  section {
+    background-color: $primary;
+  }
+    
+  .podcasts-container P {
+    margin: 20px 5% 0;
+    color: $secondary;
+  }
+
+  label {
+    font-size: 1.25rem;
+    font-family: $text;
+    font-weight: $regular;
+    color: $secondary;
+    padding-top: 10px;
+  }
+
+  .column, textarea {
+    margin-top: 10px;
+  }
+
+  button {
+    margin-top: 40px;
+    margin-left: 0;
+    font-size: 1.5rem;
+    font-family: $heading;
+  }
+  
+  textarea:hover {
+    box-shadow: 0 0 25px 15px rgba($tertiary, 25%);
+    border: 2px solid $tertiary;
+  }
+
+  input:hover {
+    box-shadow: 0 0 25px 15px rgba($tertiary, 25%);
+    border: 2px solid $tertiary;
+  }
+
+  input {
+    width: 100%;
+    height: 45px;
+    border: 2px solid $secondary;
+    background-color: transparent;
+    border-radius: 8px;
+    color: $secondary;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 5%;
+  }
+
+  textarea {
+    height: 221px;
+    border: 2px solid $secondary;
+    background-color: transparent;
+    border-radius: 8px;
+    color: $secondary;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  @media (min-width: 1024px) {
+
+    .podcasts-container {
+      text-align: center;
+      align-items: center;
+
+      label {
+        text-align: left;
+      }
+    }
+
+    .row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      width: 48%;
+    }
+
+    h2 {
+      font-size: 3rem;
+    }
+    p{
+      font-size: 1.5rem;
+      padding: 20px;
+    }
+    label {
+      font-size: 1.5rem;
+    }
+    button {
+      font-size: 2rem;
+    }
+  }
+</style>

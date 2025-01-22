@@ -2,29 +2,70 @@
 ---
 
 <section>
-<div class="project">
-  <div class="background-a">
-    <h3>Construcciones hrcc c.a</h3>
+  <div class="project">
+    <div class="background-a">
+      <h3>Construcciones hrcc c.a</h3>
+    </div>
+    <div class="content">
+    <p>Ofrece soluciones integrales para la instalación
+     y mantenimiento de sistemas de energía solar.</p>
+      <button class="primarybutton">
+        <a href="#">See Live Site</a>
+      </button>
+    </div>
   </div>
-  <div class="content">
-   <p>Lorem ipsuminformacion A.</p>
-    <button class="primarybutton">
-      <a href="#">start</a>
-    </button>
-  </div>
-</div>
 
-<div class="project">
-  <div id="show" class="background-b">
-    <h3>Construcciones hrcc c.a</h3>
+  <div class="project">
+    <div class="background-b">
+      <h3>La 95 Trucking Show Radio</h3>
+    </div>
+    <div class="content">
+      <p>Ofrece soluciones integrales para la instalación
+        y mantenimiento de sistemas de energía solar.</p>
+      <button class="primarybutton">
+        <a href="#">See Live Site</a>
+      </button>
+    </div>
   </div>
-  <div class="content">
-   <p>Lorem ipsum informacion B</p>
-    <button class="primarybutton">
-      <a href="#">start</a>
-    </button>
+
+  <div class="project">
+    <div class="background-c">
+      <h3>Para Tu Caballo -Shop</h3>
+    </div>
+    <div class="content">
+      <p>Ofrece soluciones integrales para la instalación
+        y mantenimiento de sistemas de energía solar.</p>
+      <button class="primarybutton">
+        <a href="#">See Live Site</a>
+      </button>
+    </div>
   </div>
-</div>
+
+  <div class="project">
+    <div class="background-d">
+      <h3>Inprocica International LCC</h3>
+    </div>
+    <div class="content">
+      <p>Ofrece soluciones integrales para la instalación
+        y mantenimiento de sistemas de energía solar.</p>
+      <button class="primarybutton">
+        <a href="#">See Live Site</a>
+      </button>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="background-e">
+      <h3> U.E Colegio Cacica Anasoli</h3>
+    </div>
+    <div class="content">
+      <p>Ofrece soluciones integrales para la instalación
+        y mantenimiento de sistemas de energía solar.</p>
+      <button class="primarybutton">
+        <a href="#">See Live Site</a>
+      </button>
+    </div>
+  </div>
 </section>
 
 <style lang="scss">
@@ -44,7 +85,10 @@
   }
 
   .background-a,
-  .background-b {
+  .background-b, 
+  .background-c, 
+  .background-d, 
+  .background-e {
     position: relative;
     display: flex;
     justify-content: center;
@@ -59,7 +103,10 @@
   }
 
   .background-a::before,
-  .background-b::before {
+  .background-b::before,
+  .background-c::before,
+  .background-d::before,
+  .background-e::before {
     content: '';
     position: absolute;
     top: 0;
@@ -78,6 +125,18 @@
     background-image: url("../assets/image/project2.webp");
   }
 
+  .background-c {
+    background-image: url("../assets/image/proyect3.webp");
+  }
+
+  .background-d {
+    background-image: url("../assets/image/proyect4.webp");
+  }
+
+  .background-e {
+    background-image: url("../assets/image/proyect5.webp");
+  }
+
   h3 {
     position: relative;
     z-index: 2;
@@ -86,29 +145,34 @@
 
   .content {
     position: absolute;
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background-color: $blue-accent;
     width: 362px;
     height: 260px;
     border-radius: 8px;
-    z-index: 99;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
   }
-  
+
+  .content.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
   p {
-    color: #fff;
-    font-size: 2rem;
+    color: $secondary;
+    font-size: 1.5rem;
     text-align: center;
+    margin-top: 30px;
   }
 
-@media only screen and (width >= 1024px) {
-  section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  @media only screen and (width >= 1024px) {
+    section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
   }
-}
-
 </style>
