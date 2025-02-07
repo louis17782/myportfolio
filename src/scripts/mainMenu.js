@@ -47,3 +47,27 @@ function moveCarousel() {
 }
 
 setInterval(moveCarousel, 20);
+
+// progress bar
+
+document.addEventListener('DOMContentLoaded', () => {
+  const progressBars = document.querySelectorAll('.progress-bar');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const progressBar = entry.target;
+        const progressFill = progressBar.querySelector('.progress-fill');
+        const progressValue = progressBar.getAttribute('data-progress');
+        progressFill.style.width = `${progressValue}%`;
+        observer.unobserve(progressBar);
+      }
+    });
+  }, {
+    threshold: 0.5
+  });
+
+  progressBars.forEach(bar => {
+    observer.observe(bar);
+  });
+});
