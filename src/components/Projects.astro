@@ -1,16 +1,16 @@
 ---
+const {textA, textB, textC, textD, textE, button} = Astro.props;
 ---
 
-<section>
+<section id="projects">
   <div class="project">
     <div class="background-a">
       <h3>Construcciones hrcc c.a</h3>
     </div>
     <div class="content">
-    <p>Ofrece soluciones integrales para la instalación
-     y mantenimiento de sistemas de energía solar.</p>
+    <p>{textA}</p>
       <button class="primarybutton">
-        <a href="#">See Live Site</a>
+        <a href="https://construccioneshrcc.com/" target="_blank">{button}</a>
       </button>
     </div>
   </div>
@@ -20,10 +20,9 @@
       <h3>La 95 Trucking Show Radio</h3>
     </div>
     <div class="content">
-      <p>Ofrece soluciones integrales para la instalación
-        y mantenimiento de sistemas de energía solar.</p>
+      <p>{textB}</p>
       <button class="primarybutton">
-        <a href="#">See Live Site</a>
+        <a href="#" target="_blank">{button}</a>
       </button>
     </div>
   </div>
@@ -33,10 +32,9 @@
       <h3>Para Tu Caballo -Shop</h3>
     </div>
     <div class="content">
-      <p>Ofrece soluciones integrales para la instalación
-        y mantenimiento de sistemas de energía solar.</p>
+      <p>{textC}</p>
       <button class="primarybutton">
-        <a href="#">See Live Site</a>
+        <a href="https://paratucaballo.com/" target="_blank">{button}</a>
       </button>
     </div>
   </div>
@@ -46,10 +44,9 @@
       <h3>Inprocica International LCC</h3>
     </div>
     <div class="content">
-      <p>Ofrece soluciones integrales para la instalación
-        y mantenimiento de sistemas de energía solar.</p>
+      <p>{textD}</p>
       <button class="primarybutton">
-        <a href="#">See Live Site</a>
+        <a href="https://inprocica.com/" target="_blank">{button}</a>
       </button>
     </div>
   </div>
@@ -59,10 +56,9 @@
       <h3> U.E Colegio Cacica Anasoli</h3>
     </div>
     <div class="content">
-      <p>Ofrece soluciones integrales para la instalación
-        y mantenimiento de sistemas de energía solar.</p>
+      <p>{textE}</p>
       <button class="primarybutton">
-        <a href="#">See Live Site</a>
+        <a href="https://colegioanasoli.com/" target="_blank">{button}</a>
       </button>
     </div>
   </div>
@@ -149,10 +145,13 @@
     width: 362px;
     height: 260px;
     border-radius: 8px;
-    z-index: 10;
+    z-index: 2;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
   }
 
   .content.show {
@@ -162,9 +161,15 @@
 
   p {
     color: $secondary;
-    font-size: 1.5rem;
+    font-size: 1.40rem;
     text-align: center;
     margin-top: 30px;
+    flex: 1;
+  }
+
+  .primarybutton {
+    align-self: center;
+    margin-bottom: 10px;
   }
 
   @media only screen and (width >= 1024px) {

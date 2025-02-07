@@ -1,57 +1,126 @@
-<section>
-  <figure>
-    <div class="content-image-A">
-      <h4>Lenguages</h4>
-      <ul>
-          <li>JavaScript</li>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>SASS</li>
-        </ul>
-    </div>
-  </figure>
+---
+const {title, titleA, titleB, textA, button} = Astro.props;
+import Vector from "../assets/image/boton2.svg";
+import fondo1 from "../assets/image/fondo3.png";
+---
 
-  <figure>
-    <div class="content-image-B">
+<section id="about">
+  <article>
+    <div>
+      <h2>{title}</h2>
+      <div class="underline"></div>
+      <p>{textA} </p>
+      <button class="primarybutton">
+        <a href="/CVDEVELOPER.pdf" target="_blank">{button}
+        <img src={Vector.src} alt="#"></a>
+      </button>
+    </div>
+    <div class="content-img" >
+     <img src={fondo1.src} alt="#">
+    </div>
+  </article> 
+  <div class="flex-A">
+    <figure> 
+      <h4>{titleA}</h4>
+      <div class="progress-A">
+          <ul>
+            <li>JavaScript ES6</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>SASS</li>
+          </ul> 
+        <aside>
+          <div class="progress-bar" data-progress="100">
+            <div class="progress-fill"></div>
+            <p>100%</p>
+          </div>
+          <div class="progress-bar" data-progress="60">
+            <div class="progress-fill"></div>
+            <p>60%</p>
+          </div>
+          <div class="progress-bar" data-progress="40">
+            <div class="progress-fill"></div>
+            <p>40%</p>
+          </div>
+          <div class="progress-bar" data-progress="80">
+            <div class="progress-fill"></div>
+            <p>80%</p>
+          </div>
+        </aside>
+     </div>
+    </figure>
+    <figure>
       <h4>Frameworks</h4>
-      <ul>
-        <li>React.js</li>
-        <li>Express.js</li>
-        <li>Node.js</li>
-        <li>Astro Build</li>
-      </ul>
-    </div>
-  </figure>
-
-  <figure>
-    <div class="content-image-C">
-      <h4>Skills</h4>
-      <ul>
-        <li>Figma</li>
-        <li>Git</li>
-        <li>GitHub</li>
-        <li>VScode</li>
-      </ul>
-    </div>
-  </figure>
-
+      <div class="progress-A">
+        <ul>
+          <li>React.js</li>
+          <li>Express.js</li>
+          <li>Node.js</li>
+          <li>Astro Build</li>
+        </ul>
+        <aside>
+          <div class="progress-bar" data-progress="50">
+            <div class="progress-fill"></div>
+            <p>50%</p>
+          </div>
+          <div class="progress-bar" data-progress="20">
+            <div class="progress-fill"></div>
+            <p>20%</p>
+          </div>
+          <div class="progress-bar" data-progress="20">
+            <div class="progress-fill"></div>
+            <p>20%</p>
+          </div>
+          <div class="progress-bar" data-progress="80">
+            <div class="progress-fill"></div>
+            <p>90%</p>
+          </div>
+        </aside>
+      </div>
+    </figure>
+    <figure>
+      <h4>{titleB}</h4>
+      <div class="progress-A">
+        <ul>
+          <li>Figma</li>
+          <li>Git</li>
+          <li>GitHub</li>
+          <li>UI/UX Design</li>
+        </ul>
+        <aside>
+          <div class="progress-bar" data-progress="100">
+            <div class="progress-fill"></div>
+            <p>100%</p>
+          </div>
+          <div class="progress-bar" data-progress="60">
+            <div class="progress-fill"></div>
+            <p>60%</p>
+          </div>
+          <div class="progress-bar" data-progress="40">
+            <div class="progress-fill"></div>
+            <p>40%</p>
+          </div>
+          <div class="progress-bar" data-progress="70">
+            <div class="progress-fill"></div>
+            <p>80%</p>
+          </div>
+        </aside>
+      </div>
+    </figure>
+  </div>
 </section>
 
 <style lang="scss">
   @use "../assets/sass/index" as *;
-
   section {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 70px 0;
-    gap: 30px;
     background-image: url("../assets/image/backgroundblue.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
+    padding-bottom: 50px;
 
     &::before {
       content: "";
@@ -68,44 +137,35 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: left;
+    align-items: left;
     background: linear-gradient(to top, #06080D  50%, #354773);
     box-shadow: 0 4px 18px rgba(77, 73, 73, 0.8);
-    width: 355px;
-    height: 350px;
+    min-width: 300px;
     z-index: 1;
-    padding-left: 90px;
-  }
-  
-  .content-image-A, 
-  .content-image-B, 
-  .content-image-C {
-    background-size: none;
-    background-repeat: no-repeat;
-    background-position: calc(100% + 0px) 100%;
+
+    ul {
+      padding-left: 70px;
+      text-align: left;
+    }
   }
 
-  .content-image-A {
-    background-image: url("../assets//image/numeral.png");
-  }
-
-  .content-image-B {
-    background-image: url("../assets//image/rombo.png");
-  }
-
-  .content-image-C {
-    background-image: url("../assets//image/light.png");
+  article {
+    z-index: 2;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: 0 5%;
   }
 
   h4 {
-    font-size: 2rem;
+    padding-left: 70px;
+    font-size: 1.5rem;
     color: $secondary;
     font-family: $heading;
     font-weight: $medium;
   }
 
   li {
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: $secondary;
     font-family: $text;
     font-weight: $regular;
@@ -113,8 +173,106 @@
   }
 
   ul {
-    padding: 0;
     margin: 0;
+    padding: 0;
+  }
+
+  .flex-A {
+    display: fleX; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   
+  .primarybutton {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+  }
+
+  .primarybutton a {
+    margin-right: 20px;
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content-img img {
+    width: 300px;
+  }
+
+  .progress-A {
+    display: flex; 
+    justify-content: space-around;
+  }
+
+  aside {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .progress-fill {
+    height: 20px;
+    background: linear-gradient(to right, #FF2500, #FFA500);
+    border-radius: 10px;
+    width: 0;
+    transition: width 2s ease;
+  }
+
+  .progress-bar  {
+    border-radius: 20px; 
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    width: 100px; 
+    padding: 5px;
+    background: rgba(148, 146, 146, 0.1);
+    margin-bottom: 7px;
+    position: relative;
+  }
+
+  .progress-bar p {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translateY(-50%);
+    margin: 0;
+    color: white;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    .flex-A{
+      flex-direction: row;
+    }
+
+    button {
+      width: 200px;
+      margin: 20px 5%;
+    }
+
+    .primarybutton img {
+      width: 25px;
+    }
+
+    article {
+      flex-direction: row;
+
+      p {
+        width: 50%;
+      }
+    }
+
+    .content-img img {
+      width: 400px;
+    }
+  }
 </style>
