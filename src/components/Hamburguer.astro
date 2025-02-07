@@ -1,0 +1,28 @@
+<button class="menuOpen" type="button">
+  <i class="ph ph-list"></i>
+</button>
+
+<style lang="scss">
+  @use "../assets/sass/index" as *;
+
+  i {
+    font-size: 3rem;
+    color: $tertiary;
+  }
+
+  .menuOpen {
+    position: fixed;
+    top: 25px;
+    right: 5%;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 20;
+  }
+
+  @media (min-width: 1024px) {
+    .menuOpen {
+      display: none;
+    }
+  }
+
+</style>

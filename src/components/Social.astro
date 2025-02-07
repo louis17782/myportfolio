@@ -1,0 +1,82 @@
+---
+const {anchor} = Astro.props;
+---
+
+<section id="contact">
+    <a href="/CVDEVELOPER.pdf" target="_blank">{anchor}<i class="ph ph-download-simple"></i></a>
+  <figure>
+    <a href="https://www.linkedin.com/in/luis-santeliz-678935193/" target="_blank"><i class="ph ph-linkedin-logo"></i></a>
+    <a href="https://www.instagram.com/louissanteliz/" target="_blank"><i class="ph ph-instagram-logo"></i></a>
+    <a href="https://github.com/louis17782" target="_blank"><i class="ph ph-github-logo"></i></a>
+    <a href="https://wa.me/+584127924818" target="_blank"><i class="ph ph-whatsapp-logo"></i></a>
+    
+  </figure>
+</section>
+
+<style lang="scss">
+  @use "../assets/sass/index" as *;
+
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+  }
+
+  section a  {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    font-size: 1.5rem;
+
+    i {
+      font-size: 3rem;
+      cursor: pointer;
+      margin-left: 20px;
+    }
+  }
+
+  a:hover {
+    color: $darktertiary;
+  }
+
+  figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+
+    i {
+      font-size: 50px; 
+      transition: color 0.3s;
+      margin: 0 20px;
+      cursor: pointer;
+      color: white;
+    }
+  }
+
+  a:hover i {
+    color: $darktertiary;
+  }
+
+  @media only screen and (min-width: 1024px) {
+
+    section {
+      flex-direction: row;
+      background-color: $quaternary;
+      justify-content: space-between;
+      margin: 100px 0 0 0;
+      width: 100%;
+      height: 100px;
+    }
+    section figure {
+      margin: 0 5%;
+    }
+
+    section a {
+      margin: 0 5%;
+    }
+
+  }
+</style>

@@ -1,0 +1,183 @@
+---
+const {textA, textB, textC, textD, textE, button} = Astro.props;
+---
+
+<section id="projects">
+  <div class="project">
+    <div class="background-a">
+      <h3>Construcciones hrcc c.a</h3>
+    </div>
+    <div class="content">
+    <p>{textA}</p>
+      <button class="primarybutton">
+        <a href="https://construccioneshrcc.com/" target="_blank">{button}</a>
+      </button>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="background-b">
+      <h3>La 95 Trucking Show Radio</h3>
+    </div>
+    <div class="content">
+      <p>{textB}</p>
+      <button class="primarybutton">
+        <a href="#" target="_blank">{button}</a>
+      </button>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="background-c">
+      <h3>Para Tu Caballo -Shop</h3>
+    </div>
+    <div class="content">
+      <p>{textC}</p>
+      <button class="primarybutton">
+        <a href="https://paratucaballo.com/" target="_blank">{button}</a>
+      </button>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="background-d">
+      <h3>Inprocica International LCC</h3>
+    </div>
+    <div class="content">
+      <p>{textD}</p>
+      <button class="primarybutton">
+        <a href="https://inprocica.com/" target="_blank">{button}</a>
+      </button>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="background-e">
+      <h3> U.E Colegio Cacica Anasoli</h3>
+    </div>
+    <div class="content">
+      <p>{textE}</p>
+      <button class="primarybutton">
+        <a href="https://colegioanasoli.com/" target="_blank">{button}</a>
+      </button>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  @use "../assets/sass/index" as *;
+
+  body {
+    background-color: $bluedark;
+  }
+
+  .project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 30px;
+  }
+
+  .background-a,
+  .background-b, 
+  .background-c, 
+  .background-d, 
+  .background-e {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 359px;
+    height: 257px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .background-a::before,
+  .background-b::before,
+  .background-c::before,
+  .background-d::before,
+  .background-e::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($primary, 0.8);
+    z-index: 1;
+  }
+
+  .background-a {
+    background-image: url("../assets/image/project1.webp");
+  }
+
+  .background-b {
+    background-image: url("../assets/image/project2.webp");
+  }
+
+  .background-c {
+    background-image: url("../assets/image/proyect3.webp");
+  }
+
+  .background-d {
+    background-image: url("../assets/image/proyect4.webp");
+  }
+
+  .background-e {
+    background-image: url("../assets/image/proyect5.webp");
+  }
+
+  h3 {
+    position: relative;
+    z-index: 2;
+    color: $secondary;
+  }
+
+  .content {
+    position: absolute;
+    background-color: $blue-accent;
+    width: 362px;
+    height: 260px;
+    border-radius: 8px;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .content.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  p {
+    color: $secondary;
+    font-size: 1.40rem;
+    text-align: center;
+    margin-top: 30px;
+    flex: 1;
+  }
+
+  .primarybutton {
+    align-self: center;
+    margin-bottom: 10px;
+  }
+
+  @media only screen and (width >= 1024px) {
+    section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+</style>

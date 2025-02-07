@@ -1,0 +1,151 @@
+---
+const {title, text, name, email, textarea, button} = Astro.props;
+---
+<article id="contact">
+  <h2>{title}</h2>
+  <div class="underline"></div>
+  <p>{text}</p>
+</article>
+<section>
+  <div class="form-container">
+    <form action="/" method="post">
+      <div class="row"> 
+        <div class="column">
+          <label for="name">{name}</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+        </div>
+        <div class="column">
+          <label for="email">{email}</label>
+          <input type="email" id="email" name="email" placeholder="name@gmail.com" required>
+        </div>
+      </div>
+      <label for="message">{textarea}</label>
+      <textarea id="message" name="message" placeholder="Write your message..."></textarea>
+    </form>
+    <div class="content-button"> 
+    <button class="primarybutton" type="submit">{button}</button>
+  </div>
+  </div>
+</section>
+    
+<style lang="scss">
+  @use "../assets/sass/index" as *;
+
+  article {
+    padding-top: 50px;
+    text-align: center;
+
+    p{
+      width: 50%;
+    }
+  }
+
+  section {
+    background-color: $primary;
+  }
+    
+  .form-container P {
+    margin: 20px 5% 0;
+    color: $secondary;
+  }
+
+  label {
+    font-size: 1.25rem;
+    font-family: $text;
+    font-weight: $regular;
+    color: white;
+    padding-top: 10px;
+  }
+
+  .column, textarea {
+    margin-top: 10px;
+  }
+  
+  textarea:hover {
+    box-shadow: 0 0 25px 15px rgba($tertiary, 25%);
+    border: 2px solid $tertiary;
+  }
+
+  input:hover {
+    box-shadow: 0 0 25px 15px rgba($tertiary, 25%);
+    border: 2px solid $tertiary;
+  }
+
+  input {
+    width: 100%;
+    height: 45px;
+    border-radius: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 5%;
+  }
+
+  textarea {
+    height: 221px;
+    background-color: $secondary;
+    border-radius: 8px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  @media (min-width: 1024px) {
+
+    .form-container {
+      text-align: center;
+      align-items: center;
+      padding: 0px 250px ;
+
+      label {
+        text-align: left;
+      }
+    }
+
+    .row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      width: 48%;
+    }
+
+    h2 {
+      font-size: 3rem;
+    }
+    p{
+      font-size: 1.5rem;
+      padding: 20px;
+    }
+    label {
+      font-size: 1.5rem;
+    }
+
+    article {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    .content-button {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .primarybutton {
+      width: 50%;
+     }
+  }
+</style>

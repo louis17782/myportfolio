@@ -1,0 +1,44 @@
+---
+import logo2 from '../assets/image/react.png';
+import logo3 from '../assets/image/node.png';
+import logo4 from '../assets/image/sass.png';
+import logo5 from '../assets/image/ubuntu.png';
+import logo6 from '../assets/image/js.png';
+import logo7 from '../assets/image/git.png';
+import logo8 from "../assets/image/circle-fill.svg";
+---
+
+<div id="carouselimg">
+  <a href=""><img src={logo8.src} alt="pint"></a>
+  <a href="https://react.dev/" target="_blank"><img src={logo2.src} alt="logo"></a>
+  <a href=""><img src={logo8.src} alt="pint"></a>
+  <a href="https://nodejs.org/es"  target="_blank"><img src={logo3.src} alt="logo"></a>
+  <a href=""><img src={logo8.src} alt="pint"></a>
+  <a href="https://sass-lang.com/" target="_blank"><img src={logo4.src} alt="logo"></a>
+  <a href=""><img src={logo8.src} alt="pint"></a>
+  <a href="https://ubuntu.com/" target="_blank"><img src={logo5.src} alt="logo"></a>
+  <a href=""><img src={logo8.src} alt="pint"></a>
+  <a href="https://www.javascript.com/" target="_blank"><img src={logo6.src} alt="logo"></a>
+  <a href=""><img src={logo8.src} alt="pint"></a>
+  <a href="https://github.com/" target="_blank"><img src={logo7.src} alt="logo"></a>
+</div>
+  
+<style lang="scss">
+  @use '../assets/sass/index' as*;
+
+  #carouselimg {
+    display: flex;
+    overflow: hidden;
+  }
+
+  div {
+    background-color: $quaternary;
+    padding: 20px;
+  }
+
+  #carouselimg img {
+    width: 40px;
+    margin: 0 20px;
+  }
+</style>
+  
