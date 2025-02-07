@@ -10,6 +10,9 @@ export default defineConfig({
           api: 'modern-compiler'
         }
       }
+    },
+    server: {
+      hmr: true,
     }
   },
   image: {
