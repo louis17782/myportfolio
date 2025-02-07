@@ -1,0 +1,68 @@
+---
+import Header from "../../components/Header.astro";
+import Projects from "../../components/Projects.astro";
+import Carousel from "../../components/Carousel.astro";
+import Flexbox from "../../components/Flexbox.astro";
+import Form from "../../components/Form.astro";
+import Social from "../../components/Social.astro";
+import EnglishLayout from "../../layouts/EnglishLayout.astro";
+---
+
+<EnglishLayout title="portfolio">
+	<Header
+	title="Hello! It's Luis Santeliz I'm a"
+	subtext="With experience in React, JavaScript, HTML, and CSS, specialize in building web applications that are easy to use, fast, and optimized to provide a smooth experience. Check out my work!"
+	button="Start Collaboration" />
+	<div class="container">
+		<h2>PROJECTS</h2>
+		<div class="underline"></div>
+	</div>
+	<Projects
+	textA="Website with a modern and fluid interface, with smooth animations that enhance the user experience." 
+	textB="A versatile platform that combines information, entertainment, and commerce in one place."
+	textC="Your online store: Explore, choose, and place your order with just one click."
+	textD="A space designed to provide you with dynamic and attractive informative content."
+	textE="Intuitive interface to navigate and discover information with ease."
+	button="View Live Site"/>
+	<Carousel />
+	<Flexbox
+	title="ABOUT ME" 
+	titleA="Languages"
+	textA="I specialize in creating dynamic and efficient web applications. I work closely with designers and backend developers to create seamless and highly functional interfaces. Additionally, I focus on writing clean and scalable code to ensure an optimal user experience and easily adapt to working in a team."
+	button="GET MY CV"
+	titleB="Skills"/>
+	<Form 
+	title="Let's get started!"
+	text="I'm here to help you. If you have any questions, concerns, or projects in mind, don't hesitate to reach out. I'm ready to work together!"
+	name="Your Name"
+	email="Your Email"
+	textarea="Text a Message"
+	button="SEND"/>
+	<Social
+	anchor="GET MY CV" />
+</SpanishLayout>
+<script>
+	import "../../scripts/mainMenu";
+	import "../../scripts/ValidationForm";
+</script>
+<style lang="scss">
+
+	h2 {
+		margin-top: 70px;
+	}
+	button img {
+		margin: 20px;
+	}
+
+	@media only screen and (min-width: 1024px) {
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		height: 100%;
+  }
+	}
+</style>
