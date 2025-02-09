@@ -51,6 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     confirmationMessage.style.fontWeight = 'bold';
     confirmationMessage.style.marginTop = '1rem';
     confirmationMessage.style.textAlign = 'center';
+    confirmationMessage.style.marginTop = '50px';
 
     form.parentNode.appendChild(confirmationMessage); 
 

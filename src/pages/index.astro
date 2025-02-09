@@ -9,41 +9,41 @@ import Social from "../components/Social.astro";
 ---
 
 <SpanishLayout title="portafolio">
-<Header 
-title="¡Hola! Soy Luis Santeliz, "
-subtext="Con experiencia en React, JavaScript, HTML y CSS, me dedico a construir aplicaciones web que sean fáciles de usar, rápidas y optimizadas para ofrecer una experiencia fluida al usuario. Echa un vistazo a mi trabajo..!"
-button="Iniciar Colaboración"/>
-<div class="container">
-  <h2>PROJECTOS</h2>
-  <div class="underline"></div>
-</div>
-<Projects
-textA="Sitio web con interfaz moderna y fluida, con animaciones suaves que mejoran la experiencia del usuario." 
-textB="Una plataforma versátil que combina información, entretenimiento y comercio en un solo lugar."
-textC="Tu tienda online: Explora, elige y haz tu pedido con un solo clic."
-textD="Un espacio diseñado para brindarte contenido informativo dinámico y atractivo"
-textE=" Interfaz intuitiva para navegar y descubrir información con facilidad."
-button="Ver Sitio en Vivo"/>
-<Carousel />
-<Flexbox
-title="ACERCA DE MÍ" 
-titleA="Lenguajes"
-textA="Me especializo en el desarrollo de aplicaciones web dinámicas y eficientes. Colaboro estrechamente con diseñadores y desarrolladores backend para crear interfaces fluidas y altamente funcionales. Además, me esfuerzo por escribir código que sea claro y escalable, garantizando así una experiencia de usuario óptima, y me adapto fácilmente al trabajo en equipo."
-button="Obtén mi CV"
-titleB="Habilidades"/>
-<Form 
-title="¡Comencemos!"
-text="Estoy aquí para ayudarte. Si tienes alguna pregunta, inquietud o proyecto en mente, no dudes en ponerte en contacto. ¡Estoy listo para trabajar juntos!"
-name="Tu Nombre"
-email="Tu Correo"
-textarea="Escribe un Mensaje"
-button="ENVIAR"/>
-<Social
-anchor="Obtén mi CV" />
+	<Header 
+	title="¡Hola! Soy Luis Santeliz, "
+	subtext="Con experiencia en React, JavaScript, HTML y CSS, me dedico a construir aplicaciones web que sean fáciles de usar, rápidas y optimizadas para ofrecer una experiencia fluida al usuario. Echa un vistazo a mi trabajo..!"
+	button="Iniciar Colaboración"/>
+	<div class="container">
+		<h2>PROYECTOS</h2>
+		<div class="underline"></div>
+	</div>
+	<Projects
+	textA="Sitio web con interfaz moderna y fluida, con animaciones suaves que mejoran la experiencia del usuario." 
+	textB="Una plataforma versátil que combina información, entretenimiento y comercio en un solo lugar."
+	textC="Tu tienda online: Explora, elige y haz tu pedido con un solo clic."
+	textD="Un espacio diseñado para brindarte contenido informativo dinámico y atractivo"
+	textE=" Interfaz intuitiva para navegar y descubrir información con facilidad."
+	button="Ver Sitio en Vivo"/>
+	<Carousel />
+	<Flexbox
+	title="ACERCA DE MÍ" 
+	titleA="Lenguajes"
+	textA="Me especializo en el desarrollo de aplicaciones web dinámicas y eficientes. Colaboro estrechamente con diseñadores y desarrolladores backend para crear interfaces fluidas y altamente funcionales. Además, me esfuerzo por escribir código que sea claro y escalable, garantizando así una experiencia de usuario óptima, y me adapto fácilmente al trabajo en equipo."
+	button="Obtén mi CV"
+	titleB="Habilidades"/>
+	<Form 
+	title="¡Comencemos!"
+	text="Estoy aquí para ayudarte. Si tienes alguna pregunta, inquietud o proyecto en mente, no dudes en ponerte en contacto. ¡Estoy listo para trabajar juntos!"
+	name="Tu Nombre"
+	email="Tu Correo"
+	textarea="Escribe un Mensaje"
+	button="ENVIAR"/>
+	<Social
+	anchor="Obtén mi CV" />
 </SpanishLayout>
 <script>
 	import "../scripts/mainMenu";
-	import "../scripts/ValidationForm";
+	import "../scripts/ValidationForm"
 </script>
 <style lang="scss">
 
@@ -56,13 +56,13 @@ anchor="Obtén mi CV" />
 
 	@media only screen and (min-width: 1024px) {
 
-	.container {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		height: 100%;
-  }
+		.container {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			height: 100%;
+		}
 	}
 </style>
