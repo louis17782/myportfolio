@@ -8,6 +8,22 @@ document.querySelector('.menuOpen').addEventListener('click', () => {
   document.querySelector('nav').classList.toggle('active');
 });
 
+// hover on projects
+
+const projects = document.querySelectorAll('.project');
+
+projects.forEach(project => {
+  project.addEventListener('mouseover', () => {
+    const content = project.querySelector('.content');
+    content.classList.add('show'); 
+  });
+
+  project.addEventListener('mouseout', () => {
+    const content = project.querySelector('.content');
+    content.classList.remove('show');
+  });
+});
+
 // Close menu after navigation
 const navLinks = document.querySelectorAll('.navlinks a[href="#projects"], .navlinks a[href="#about"], .navlinks a[href="#contact"], .navlinks a[href="#hola"]');
 
