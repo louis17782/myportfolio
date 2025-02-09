@@ -1,7 +1,7 @@
 ---
 const {title, titleA, titleB, textA, button} = Astro.props;
 import Vector from "../assets/image/boton2.svg";
-import fondo1 from "../assets/image/fondo3.png";
+import fondo1 from "../assets/image/me.png";
 ---
 
 <section id="about">
@@ -30,9 +30,9 @@ import fondo1 from "../assets/image/fondo3.png";
             <li>SASS</li>
           </ul> 
         <aside>
-          <div class="progress-bar" data-progress="100">
+          <div class="progress-bar" data-progress="50">
             <div class="progress-fill"></div>
-            <p>100%</p>
+            <p>50%</p>
           </div>
           <div class="progress-bar" data-progress="60">
             <div class="progress-fill"></div>
@@ -190,13 +190,12 @@ import fondo1 from "../assets/image/fondo3.png";
     align-items: center;
   }
 
-  .primarybutton a {
-    margin-right: 20px;
+  p {
     font-size: 1rem;
   }
 
-  p {
-    font-size: 1rem;
+  button img {
+    width: 25px;
   }
 
   article {
@@ -255,7 +254,7 @@ import fondo1 from "../assets/image/fondo3.png";
     }
 
     button {
-      width: 200px;
+      width: 250px;
       margin: 20px 5%;
     }
 
