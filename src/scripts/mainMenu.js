@@ -8,23 +8,19 @@ document.querySelector('.menuOpen').addEventListener('click', () => {
   document.querySelector('nav').classList.toggle('active');
 });
 
+// Close menu after navigation
+const navLinks = document.querySelectorAll('.navlinks a[href="#projects"], .navlinks a[href="#about"], .navlinks a[href="#contact"], .navlinks a[href="#hola"]');
 
-const projects = document.querySelectorAll('.project');
+function closeMenuAfterNavigation() {
+  document.querySelector('.blur-background').classList.remove('active');
+  document.querySelector('nav').classList.remove('active');
+}
 
-projects.forEach(project => {
-  project.addEventListener('mouseover', () => {
-    const content = project.querySelector('.content');
-    content.classList.add('show'); 
-  });
-
-  project.addEventListener('mouseout', () => {
-    const content = project.querySelector('.content');
-    content.classList.remove('show');
-  });
+navLinks.forEach(link => {
+  link.addEventListener('click', closeMenuAfterNavigation);
 });
 
 // carousel
-
 const carousel = document.getElementById('carouselimg');
 let scrollSpeed = 2;
 
@@ -49,7 +45,6 @@ function moveCarousel() {
 setInterval(moveCarousel, 20);
 
 // progress bar
-
 document.addEventListener('DOMContentLoaded', () => {
   const progressBars = document.querySelectorAll('.progress-bar');
 
