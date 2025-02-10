@@ -32,17 +32,11 @@ const {title, text, name, email, textarea, button} = Astro.props;
   @use "../assets/sass/index" as *;
 
   article {
-    padding: 50px;
+    padding: 50px 0 50px 0;
   }
 
   section {
     background-color: $primary;
-    margin: 0 5%;
-  }
-    
-  .form-container P {
-    margin: 20px 5% 0;
-    color: $secondary;
   }
 
   label {
@@ -87,6 +81,17 @@ const {title, text, name, email, textarea, button} = Astro.props;
     border-radius: 8px;
     color: black;
     font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .primarybutton {
+      width: 100%;
+    }
+
+  .content-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   @media (min-width: 1024px) {
@@ -135,13 +140,6 @@ const {title, text, name, email, textarea, button} = Astro.props;
       p{
         width: 50%;
       }
-    }
-
-    .content-button {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
     }
 
     .primarybutton {
