@@ -1,10 +1,10 @@
 ---
-const {title, text, subtext, button} = Astro.props;
+const {title, text, span, subtext, button} = Astro.props;
 ---
 
 <header id="hola">
   <div class="content-box"> 
-    <h1>{title} <span>Front End Developer</span></h1>
+    <h1>{title} <span>{span}</span></h1>
     <p>{text}</p>
     <br>
     <p>{subtext}</p>
