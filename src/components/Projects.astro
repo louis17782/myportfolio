@@ -1,8 +1,20 @@
 ---
-const {textA, textB, textC, textD, textE, textF, textG, button} = Astro.props;
+const {textA, textB, textC, textD, textE, textF, textH, textG, button} = Astro.props;
 ---
 
 <section id="projects">
+  <div class="project">
+    <div class="background-a">
+      <h3>Hotel Simona del Mar</h3>
+    </div>
+    <div class="content">
+    <p>{textH}</p>
+      <button class="primarybutton">
+        <a href="https://nuevo.simonadelmar.com.co/" target="_blank">{button}</a>
+      </button>
+    </div>
+  </div>
+
   <div class="project">
     <div class="background-a">
       <h3>Construcciones hrcc c.a</h3>
