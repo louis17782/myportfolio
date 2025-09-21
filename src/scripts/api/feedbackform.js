@@ -12,7 +12,6 @@ const form = document.getElementById('contact-form');
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          to: 'luissanteliz22@gmail.com',
           subject: `Nuevo mensaje de ${name}`,
           text: `Email: ${email}\n\nMensaje:\n${message}`
         })
