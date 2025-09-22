@@ -13,7 +13,7 @@ const form = document.getElementById('contact-form');
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           subject: `Nuevo mensaje de ${name}`,
-          text: `Email: ${email}\n\nMensaje:\n${message}`
+          text: `Nombre: ${name}\nEmail: ${email}\n\nMensaje:\n${message}`,
         })
       });
 
