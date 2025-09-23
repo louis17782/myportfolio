@@ -47,7 +47,6 @@ import Social from "../components/Social.astro";
 </SpanishLayout>
 <script>
 	import "../scripts/mainMenu";
-	import "../scripts/ValidationForm";
 	import "../scripts/api/feedbackform"
 </script>
 <style lang="scss">
@@ -58,6 +57,12 @@ import Social from "../components/Social.astro";
 	button img {
 		margin: 20px;
 	}
+
+	@keyframes fadeIn {
+		from { opacity: 0; transform: translateY(-10px); }
+		to { opacity: 1; transform: translateY(0); }
+	}
+
 
 	@media only screen and (min-width: 1024px) {
 
