@@ -34,7 +34,7 @@ const form = document.getElementById('contact-form');
           font-family: Arial, sans-serif;
           animation: fadeIn 0.5s ease-in-out;
           ">
-          ✅ ¡Tu mensaje ha sido enviado con éxito!
+          ✅ Your message has been sent successfully!
         </div>
         `;
         form.parentElement.appendChild(confirmation);
@@ -43,10 +43,10 @@ const form = document.getElementById('contact-form');
         }, 5000);
         form.reset();
       } else {
-        alert('❌ Error al enviar el mensaje: ' + result);
+        alert('❌ Failed to send your message: ' + result);
       }
     } catch (err) {
       console.error('Error:', err);
-      alert('⚠️ Hubo un problema al enviar el mensaje');
+      alert('⚠️ There was a problem sending your message');
     }
   });
