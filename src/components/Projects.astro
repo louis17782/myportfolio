@@ -1,5 +1,5 @@
 ---
-const {textA, textB, textC, textD, textE, textF, textH, textG, button} = Astro.props;
+const {textA, textB, textC, textD, textE, textF, textH, textG, texti, button} = Astro.props;
 ---
 
 <section id="projects">
@@ -58,7 +58,19 @@ const {textA, textB, textC, textD, textE, textF, textH, textG, button} = Astro.p
     <div class="content">
       <p>{textD}</p>
       <button class="primarybutton">
-        <a href="https://inprocica.com/" target="_blank">{button}</a>
+        <a href="https://inprocicainternational.com/" target="_blank">{button}</a>
+      </button>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="background-i">
+      <h3>Venezolana de acero</h3>
+    </div>
+    <div class="content">
+      <p>{texti}</p>
+      <button class="primarybutton">
+        <a href="https://venezolanadeacero.netlify.app/" target="_blank">{button}</a>
       </button>
     </div>
   </div>
@@ -123,7 +135,8 @@ const {textA, textB, textC, textD, textE, textF, textH, textG, button} = Astro.p
   .background-e,
   .background-f,
   .background-g,
-  .background-h {
+  .background-h,
+  .background-i {
     position: relative;
     display: flex;
     justify-content: center;
@@ -144,7 +157,8 @@ const {textA, textB, textC, textD, textE, textF, textH, textG, button} = Astro.p
   .background-e::before,
   .background-f::before,
   .background-g::before,
-  .background-h::before {
+  .background-h::before,
+  .background-i::before {
     content: '';
     position: absolute;
     top: 0;
@@ -185,6 +199,9 @@ const {textA, textB, textC, textD, textE, textF, textH, textG, button} = Astro.p
 
   .background-h {
     background-image: url("../assets/image/imagen1.png");
+  }
+  .background-i {
+    background-image: url("../assets/image/venezolana.png");
   }
 
   h3 {
