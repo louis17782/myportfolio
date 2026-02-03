@@ -2,7 +2,6 @@
 import Navigation from "../components/Navigation.astro";
 import Openbutton from "../components/Hamburguer.astro";
 import logo from "../assets/image/logo.png";
-const {ogImage} = Astro.props;
 ---
 
 <!doctype html>
@@ -14,14 +13,16 @@ const {ogImage} = Astro.props;
 		<meta name="viewport" content="width=device-width" />
     <meta name="description" content="portafolio de luis santeliz desarrollador web">
 		<meta name="generator" content={Astro.generator} /> 
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Portafolio de Luis Santeliz - Desarrollador Web" />
     <meta property="og:description" content="Diseño y construyo aplicaciones web modernas, cuidando cada detalle del flujo, el rendimiento y la experiencia del usuario" />
-    <meta property="og:image:secure_url" content={ogImage} />
-    <meta property="og:url" content="https://luissanteliz.dev/" />
-    <!-- WhatsApp / Facebook -->
+    <meta property="og:image" content="https://luissanteliz.dev/poster-og.jpg" />
+    <meta property="og:image:secure_url" content="https://luissanteliz.dev/poster-og.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://luissanteliz.dev/" />
 		<title>Desarrollador web</title>
 		<script src="https://unpkg.com/@phosphor-icons/web"></script>
     <script async src="https://asyntai.com/static/js/chat-widget.js" data-asyntai-id="asyntai_07bbefe9b9a8"></script>
