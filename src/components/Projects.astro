@@ -1,5 +1,5 @@
 ---
-const {textA, textB, textC, textD, textE, textF, textH, textG, texti, button} = Astro.props;
+const {textA, textB, textC, textD, textE, textF, textH, textG, texti, textL, textJ, button} = Astro.props;
 ---
 
 <section id="projects">
@@ -106,8 +106,32 @@ const {textA, textB, textC, textD, textE, textF, textH, textG, texti, button} = 
     <div class="content">
       <p>{textF}</p>
       <button class="primarybutton">
-        <a href="https://raggart.netlify.app" target="_blank">{button}</a>
-      </button
+        <a href="https://djraggart.com/" target="_blank">{button}</a>
+      </button>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="background-J">
+      <h3>Store app</h3>
+    </div>
+    <div class="content">
+      <p>{textJ}</p>
+      <button class="primarybutton">
+        <a href="https://store-app-production-65a0.up.railway.app/" target="_blank">{button}</a>
+      </button>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="background-L">
+      <h3>Template store</h3>
+    </div>
+    <div class="content">
+      <p>{textL}</p>
+      <button class="primarybutton">
+        <a href="https://freshvory.com/" target="_blank">{button}</a>
+      </button>
     </div>
   </div>
 </section>
@@ -136,7 +160,9 @@ const {textA, textB, textC, textD, textE, textF, textH, textG, texti, button} = 
   .background-f,
   .background-g,
   .background-h,
-  .background-i {
+  .background-i,
+  .background-J,
+  .background-L {
     position: relative;
     display: flex;
     justify-content: center;
@@ -158,7 +184,9 @@ const {textA, textB, textC, textD, textE, textF, textH, textG, texti, button} = 
   .background-f::before,
   .background-g::before,
   .background-h::before,
-  .background-i::before {
+  .background-i::before,
+  .background-J::before,
+  .background-L::before {
     content: '';
     position: absolute;
     top: 0;
@@ -202,6 +230,12 @@ const {textA, textB, textC, textD, textE, textF, textH, textG, texti, button} = 
   }
   .background-i {
     background-image: url("../assets/image/venezolana.png");
+  }
+  .background-J {
+    background-image: url("../assets/image/store1.jpg");
+  }
+  .background-L {
+    background-image: url("../assets/image/store2.jpg");
   }
 
   h3 {
